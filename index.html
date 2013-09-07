@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- METATAGS -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="en-US" />
+        <title>HTML5 device</title>
+
+        <style>
+            * {
+                -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            html {
+                background-image: -webkit-radial-gradient(center center, circle cover, #ffffff, #cfcfcf 100%);
+                background-image:    -moz-radial-gradient(center center, circle cover, #ffffff, #cfcfcf 100%);
+                background-image:     -ms-radial-gradient(center center, circle cover, #ffffff, #cfcfcf 100%);
+                background-image:      -o-radial-gradient(center center, circle cover, #ffffff, #cfcfcf 100%);
+                background-image:         radial-gradient(center center, circle cover, #ffffff, #cfcfcf 100%);
+            }
+
+            h1 {
+                line-height: 200%;
+                margin: 30px auto;
+                text-align: center;
+                font-family: sans-serif;
+                font-weight: 100;
+            }
+
+            nav {
+                margin: 0 auto;
+                text-align: center;
+/*                 margin-bottom: 30px; */
+            }
+
+            nav a {
+                padding: 0 10px;
+                height:                24px;
+                line-height:           24px;
+                border-radius:         24px;
+                -webkit-border-radius: 24px;
+                -moz-border-radius:    24px;
+                display: inline-block;
+                font-family: sans-serif;
+                background-color: #ccc;
+            }
+
+            nav a.active, nav a:hover {
+                color: #e2e2e2;
+                background-color: #333;
+                cursor: pointer;
+            }
+
+            .device-container {
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            code, pre {
+                background-color: #e2e2e2;
+                border-radius:         24px;
+                -webkit-border-radius: 24px;
+                -moz-border-radius:    24px;
+                border: 1px #ccc solid;
+                display: block;
+                width: 800px;
+                padding: 10px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            .addr {
+	            text-align: center;
+	            vertical-align: middle;
+	            margin: 5px auto;
+            }
+            
+            .addr input{
+	            width: 80%;
+	            height: 1.5em;
+	            font-size: 100%;
+            }
+            
+            .addr button {
+	            padding: 3px;
+	            font-size: 100%;
+            }
+            
+            .header{
+	            position: fixed;
+	            top:0px;
+	            margin: 0 auto;
+	            z-index: 200;
+	            width: 100%;
+            	background-color: #f4f4f4;
+	            opacity: 0.1;	            
+	            padding-bottom: 5px;
+            }
+            
+            .hd1{
+
+            }
+            
+            .hdfloat{
+            	display: none;
+	            float: left;
+            }
+            
+            .cnt_out{
+	            margin-top: 35px;
+            }
+            
+        </style>
+
+        <!-- THE STYLESHEET FOR DEVICE MOCKUPS -->
+        <link rel="stylesheet" type="text/css" href="./device-mockups/device-mockups2.css" />
+
+    </head>
+
+    <body>
+    	<div id="headerbar" class="header">
+    		<div class="hdfloat"><img src="arrow_rt.png"></div>
+    		<div id="hd1" class="hd1">
+	        <div class="addr">
+	        	<label>网页地址：</label>
+	        	<input id="url_input" type="text" placeholder="http://"/>
+	        	<button type="button" id="btn_addr">查看</button>
+	        </div>
+	        <nav>
+	            <span id="device-tabs">
+	                <a data-value="iphone5"  data-size-port="640px" data-size-land="1366px"     class="active" >iPhone5</a>
+	                <a data-value="ipad"     data-size-port="768px" data-size-land="1024px" >iPad</a>
+	                <a data-value="imac"     data-size-port="1080px" data-size-land="1920px" >iMac</a>
+	                <a data-value="macbook"  data-size-port="900px" data-size-land="1440px" >MacBook Pro</a>
+	                <a data-value="s3"       data-size-port="720px" data-size-land="1280px" >Galaxy S3</a>
+	                <a data-value="nexus7"   data-size-port="1200px" data-size-land="1920px" >Nexus 7</a>
+	                <a data-value="surface"  data-size-port="768px" data-size-land="1366px" >Surface</a>
+	                <a data-value="lumia920" data-size-port="768px" data-size-land="1280px" >Lumia920</a>
+	            </span>
+	            &nbsp;&nbsp;|&nbsp;&nbsp;
+	            <span id="orientation-tabs">
+	                <a data-value="portrait" class="active">Portrait</a>
+	                <a data-value="landscape">Landscape</a>
+	            </span>
+	            &nbsp;&nbsp;|&nbsp;&nbsp;
+	            <span id="color-tabs">
+	                <a data-value="black" class="active">Color1</a>
+	                <a data-value="white">Color2</a>
+	            </span>
+	        </nav>
+    		</div>
+    	</div>
+        
+        <div class="cnt_out">
+		<div class="device-container" style="max-width:640px;" data-size-port="640px" data-size-land="1366px"><div class="device-mockup" data-device="iphone5" data-orientation="portrait" data-color="black">
+		    <div class="device">
+		        <div class="screen">
+		        	<iframe id="screeniframe" src="http://v3.bootcss.com/" frameborder="no" width="100%" height="100%" scrolling="auto" name="tabletframe"></iframe>
+		        </div>
+		        <div class="button">
+		        </div>
+		    </div>
+		</div>
+		</div>
+
+        
+        <pre id="generated-code"></pre>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                var cachedEl = $(".device-container").first();
+                var sframe = $("#screeniframe");
+
+                function setSize() {
+                    if( $(cachedEl).find(".device-mockup").attr("data-orientation") == "portrait" ) {
+                        $(cachedEl).css("maxWidth", $(cachedEl).attr("data-size-port"));
+                    } else {
+                        $(cachedEl).css("maxWidth", $(cachedEl).attr("data-size-land"));
+                    }
+                }
+
+                $("#device-tabs > a").click(function(e){
+                    e.preventDefault();
+                    $(this).addClass("active").siblings().removeClass("active");
+                    $(cachedEl).attr("data-size-port", $(this).attr("data-size-port")).attr("data-size-land", $(this).attr("data-size-land")).find(".device-mockup").attr("data-device", $(this).attr("data-value"));
+                    setSize()
+                    //$("#generated-code").text($(cachedEl).html());
+                    return false;
+                });
+
+                $("#orientation-tabs > a").click(function(e){
+                    e.preventDefault();
+                    $(this).addClass("active").siblings().removeClass("active");
+                    $(cachedEl).find(".device-mockup").attr("data-orientation", $(this).attr("data-value"));
+                    setSize()
+                    //$("#generated-code").text($(cachedEl).html());
+                    return false;
+                });
+
+                $("#color-tabs > a").click(function(e){
+                    e.preventDefault();
+                    $(this).addClass("active").siblings().removeClass("active");
+                    $(cachedEl).find(".device-mockup").attr("data-color", $(this).attr("data-value"));
+                    //$("#generated-code").text($(cachedEl).html());
+                    return false;
+                });
+
+                //$("#generated-code").text($(cachedEl).html());
+                
+                $("#url_input").keypress(function(e){
+	                if(e.keyCode==13){
+                	changeFrame();		                
+	                }
+                });
+                
+                $("#btn_addr").click(function(e){
+                	changeFrame();
+
+                });
+                
+                function changeFrame(){
+	                adr = $("#url_input").val();
+                	//alert(adr);
+                	var regex = new RegExp("^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?");
+
+                	if(adr && regex.test(adr)){
+		                sframe.attr("src",adr);	                	
+                	}else{
+	                	alert("url is invalid.");
+                	}	                
+                };
+                
+                
+                $("#headerbar").mouseenter(function(e){
+	                $(this).css("opacity",0.9);
+                });
+
+				$("#headerbar").mouseleave(function(e){
+					$(this).css("opacity",0.1);
+				});      
+				
+				
+				          
+				
+				});                
+        </script>
+
+
+    </body>
+</html>
